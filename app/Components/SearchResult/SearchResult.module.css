@@ -1,0 +1,16 @@
+.url{
+    padding: 0;
+    margin-top: 2rem;
+}
+.name{
+    color: blue;
+    margin: 0;
+    padding: 0;
+}
+.text{
+    margin: 0;
+    padding: 0
+}
+.searchResult{
+    cursor: pointer;
+}

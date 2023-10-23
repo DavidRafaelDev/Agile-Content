@@ -1,20 +1,7 @@
 'use client';
-
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { faker } from '@faker-js/faker';
-
-export interface Animal {
-    name: string;
-    text: string;
-    url: string;
-    image: string;
-}
-
-
-export interface AnimalsState {
-    animals: Animal[];
-    selectedAnimal: Animal | null;
-}
+import { Animal, AnimalsState } from './types';
 
 export const initialState: AnimalsState = {
     animals: [],

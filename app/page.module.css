@@ -3,17 +3,87 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 .input{
   border: 1px solid black;
   display: flex;
   padding: 1rem;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.inputWithResult{
+  border: 1px solid black;
+  display: flex;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 500px;
+  margin: 0rem 2rem;
 }
 
 .searchResultContainer {
   display: flex;
+  padding: 5rem;
 }
 
 .searchResult {
   max-width: 60%;
+}
+
+.logoInput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 200px;
+  font-size: 100px;
+}
+
+.headerWithoutResult{
+  padding: 20px;
+  width: 98%;
+  text-align: center;
+  font-size: 18px;
+  background: rgba(239, 239, 239, 0.9);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerWithResult{
+    width: 100%;
+    text-align: center;
+    background: rgba(239, 239, 239, 0.9);
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.button{
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+}
+
+.notFound{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+.footer{
+  display: flex;
+  background:  rgba(239, 239, 239, 0.9);
+  justify-content: space-between;
+  padding: 8px;
+  width: 98%;
 }

@@ -1,21 +1,21 @@
 'use client';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../GlobalRedux/store';
-import { Animal } from '@/app/GlobalRedux/Features/Animals/AnimalsSlice';
+import styles from './AnimalDetail.module.css';
+
 export default function AnimalDetail() {
     const selectedAnimal = useSelector((state: RootState) => state.animals.selectedAnimal);
-
+    if (!selectedAnimal) {
+        return null;
+    }
+    const { image, url, name, text } = selectedAnimal;
     return (
-        <div>
-            {selectedAnimal && (
-                <>
-                    <img src={selectedAnimal.image} alt="proprably a cat" />
-                    <p>{selectedAnimal?.url}</p>
-                    <h3>{selectedAnimal?.name}</h3>
-                    <p>{selectedAnimal?.text}</p>
-
-                </>
-            )}
-        </div >
-    )
+        <div className={styles.animalDetail}>
+            <img src={image} alt={`Probably a ${name}`} />
+            <p>{url}</p>
+            <h3>{name}</h3>
+            <p>{text}</p>
+        </div>
+    );
 }
